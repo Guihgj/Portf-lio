@@ -6,57 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100&family=Tapestry&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hero">
-        <header>
-            <nav>
-              <a class="logo" href="/">Portfólio</a>
-              <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-              </div>
-              <ul class="nav-list">
-                <li><a href="#">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-              </ul>
-            </nav>
-          </header> 
+    <nav class="navbar">
+        <div class="logo">Nerd Store</div>
+        <a href="#" class="menu-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
     <div class="content">
-        <h4>Olá, meu nome é</h4>
-        <h1>Guilherme <span>Henrique</span></h1>
-        <h3>Eu sou Desenvolvedor Web</h3>
+
+        <div class="txt-content">
+            <h4>Olá, meu nome é</h4>
+            <h1>Guilherme <span>Henrique</span></h1>
+            <h3>Eu sou Desenvolvedor Web</h3>
+        </div>
     </div>
-    <a name="sobre">
-        <section class="about">
-            <div class="main">
+
+        <section class="about"> 
+            <div class="box-about">
                 <img src="./img/img-main.jpg" class="img-main">
                 <div class="about-text">
                     <h2>Sobre Mim</h2>
                     <h5>Desenvolvedor <span>Web</span></h5>
-                    <p>Sou estudante de Gestão da Tecnologia e Informação na Faculdade Estadual de Tecnologia, mais conhecida como Fatec,meu objetivo é ingressar profissionalmente na área de desenvolvimento web, área que estudo e sempre busco evoluir cada dia mais minhas habilidades.Atualmente estudo HTML, CSS e JAVASCRIPT, também sempre vejo conteúdos de UX e UI,pois me auxiliam na hora de desenvolver.</p>
+                    <p>Sou estudante de Gestão da Tecnologia e Informação na Faculdade Estadual de Tecnologia, mais conhecida como Fatec,meu objetivo é ingressar profissionalmente na área de desenvolvimento web, área que estudo e sempre busco evoluir cada dia mais minhas habilidades , atualmente possuo conhecimento nas tecnologias de HTML,CSS e Javascript </p>.
+                       
                 </div>
+            </div>
             </div>
         </section>
     </a>
-    <a name="skills">
-        <section class="habilidades">
-            <div class="box-habilides">
-                <div class="txt-habilidades">
-                    <h1>Skills</h1>
-                </div>
-                <div class="logo-habilidades">
-                    <img src="./img/logo-html.png" class="logo-img">
-                    <img src="./img/logo-css.png" class="logo-img">
-                    <img src="./img/logo-js.png" class="logo-img">
-                </div>
-            </div>
-        </section>
+   
     </a>
    
      <a name="projetos">
@@ -94,7 +89,7 @@
                 <h1>Contato</h1>
 
                 <h5>Email:Guihgj11@outlook.com</h5>
-                <h5>(12)997487449</h5>
+                <h5>(12)997204232</h5>
           </div>
           <div class="box-contato">
             <div class="item">
@@ -111,9 +106,13 @@
     </a>
 
    
-
-   <script src="./js/mobile.js">
-
-   </script>
+    <script>
+        const toggleButton = document.getElementsByClassName('menu-button')[0]
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+        
+        toggleButton.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active')
+        })
+        </script>
 </body>
 </html>
